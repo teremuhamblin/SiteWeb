@@ -1,15 +1,50 @@
+/* ---------------------------------------------------------
+   🌈 DESIGN SYSTEM — VARIABLES
+--------------------------------------------------------- */
+
 :root {
+  /* Couleurs claires */
   --primary: #e4572e;
   --primary-dark: #b53f1c;
   --bg: #f7f4ef;
+  --surface: #ffffff;
   --text: #222222;
-  --accent: #1f6feb;
   --muted: #666666;
-  --radius: 8px;
+  --accent: #1f6feb;
 
+  /* Couleurs dark mode */
+  --bg-dark: #1b1b1b;
+  --surface-dark: #2a2a2a;
+  --text-dark: #e6e6e6;
+  --muted-dark: #aaaaaa;
+
+  /* Layout */
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   --max-width: 1080px;
+
+  /* Typographie */
   --font-base: 16px;
+  --font-scale: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
+
+  /* Animation */
+  --transition: 0.25s ease;
 }
+
+/* Dark mode automatique */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--bg-dark);
+    --surface: var(--surface-dark);
+    --text: var(--text-dark);
+    --muted: var(--muted-dark);
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ---------------------------------------------------------
+   🌐 RESET & BASE
+--------------------------------------------------------- */
 
 *,
 *::before,
@@ -19,6 +54,7 @@
 
 html {
   font-size: var(--font-base);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,17 +62,9 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  transition: background var(--transition), color var(--transition);
 }
 
 img {
@@ -45,14 +73,33 @@ img {
   display: block;
 }
 
-/* HEADER & NAV */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus visible accessible */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------
+   🧭 HEADER & NAVIGATION
+--------------------------------------------------------- */
 
 header {
-  background: #ffffff;
-  border-bottom: 1px solid #e0ded8;
+  background: var(--surface);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+  backdrop-filter: blur(8px);
 }
 
 .nav-container {
@@ -68,30 +115,26 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .brand-logo {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: var(--primary);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   font-weight: 700;
   font-size: 1.1rem;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
+  box-shadow: var(--shadow);
 }
 
 .brand-text span:first-child {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .brand-text span:last-child {
@@ -105,52 +148,57 @@ nav ul {
   gap: 0.75rem;
   margin: 0;
   padding: 0;
-  font-size: 0.9rem;
   flex-wrap: wrap;
 }
 
 nav a {
-  padding: 0.35rem 0.7rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
+  transition: background var(--transition), color var(--transition);
 }
 
 nav a.active,
 nav a:hover {
   background: var(--primary);
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
-/* MAIN LAYOUT */
+/* ---------------------------------------------------------
+   🏗️ LAYOUT GLOBAL
+--------------------------------------------------------- */
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1.25rem 2.5rem;
+  padding: 2rem 1.25rem 3rem;
 }
 
-/* HERO */
+/* ---------------------------------------------------------
+   🎯 HERO SECTION
+--------------------------------------------------------- */
 
 .hero {
   background: linear-gradient(135deg, #fff7f3, #f0f4ff);
-  border-radius: 18px;
-  padding: 2rem 1.75rem;
-  margin-bottom: 2rem;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
-  gap: 1.5rem;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 2rem;
   align-items: center;
+  box-shadow: var(--shadow);
 }
 
 .hero h1 {
   margin-top: 0;
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
 }
 
 .hero p.lead {
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   color: var(--muted);
-  max-width: 40rem;
+  max-width: 45rem;
 }
 
 .hero-badges {
@@ -162,218 +210,151 @@ main {
 
 .badge {
   font-size: 0.8rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid #e0ded8;
-  background: #ffffffaa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--surface);
 }
 
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-/* BUTTONS */
-
+/* CTA buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1.1rem;
+  padding: 0.7rem 1.3rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  font-size: 0.9rem;
   font-weight: 600;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  font-size: 0.95rem;
+  transition: var(--transition);
 }
 
 .btn-primary {
   background: var(--primary);
-  color: #ffffff;
+  color: #fff;
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
 }
 
 .btn-outline:hover {
-  background: #fff1eb;
+  background: #ffe9e2;
 }
 
-/* HERO SIDE */
-
+/* Hero side card */
 .hero-side {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-  font-size: 0.9rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  font-size: 0.95rem;
 }
 
-.hero-side h2 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-
-.hero-side ul {
-  padding-left: 1.1rem;
-  margin: 0.5rem 0 0.75rem;
-}
-
-/* SECTIONS */
-
-.section {
-  margin-bottom: 2rem;
-}
-
-.section h1 {
-  font-size: 1.6rem;
-  margin-top: 0;
-}
-
-.section h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-}
-
-/* CARDS & GRIDS */
+/* ---------------------------------------------------------
+   📦 CARDS & GRIDS
+--------------------------------------------------------- */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
 }
 
 .card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: var(--radius);
-  padding: 1rem 1.1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  font-size: 0.9rem;
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
   margin-top: 0;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .tag {
   display: inline-block;
   font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 999px;
   background: #eef2ff;
   color: #1f3b8f;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
-.list-inline {
-  list-style: none;
-  padding: 0;
-  margin: 0.4rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.8rem;
-  font-size: 0.85rem;
-}
-
-.list-inline li::before {
-  content: "• ";
-  color: var(--primary);
-}
-
-/* INFO GRID */
+/* ---------------------------------------------------------
+   📘 INFO BLOCKS
+--------------------------------------------------------- */
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
 }
 
 .info-block {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: var(--radius);
-  padding: 1rem 1.1rem;
-  font-size: 0.9rem;
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
 }
 
-.info-block h3 {
-  margin-top: 0;
-  font-size: 1.05rem;
-}
-
-/* FOOTER */
+/* ---------------------------------------------------------
+   🦶 FOOTER
+--------------------------------------------------------- */
 
 footer {
-  border-top: 1px solid #e0ded8;
-  background: #ffffff;
+  background: var(--surface);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 3rem;
 }
 
 .footer-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 1.25rem 1.5rem;
-  font-size: 0.8rem;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.85rem;
   color: var(--muted);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
   justify-content: space-between;
+  gap: 1rem;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.footer-links a {
-  color: var(--muted);
-}
-
-.footer-links a:hover {
-  color: var(--accent);
-}
-
-/* RESPONSIVE BREAKPOINTS */
+/* ---------------------------------------------------------
+   📱 RESPONSIVE BREAKPOINTS
+--------------------------------------------------------- */
 
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
   }
-
   .hero-side {
     order: -1;
   }
 }
 
 @media (max-width: 720px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   nav ul {
-    width: 100%;
     justify-content: flex-start;
   }
-
-  main {
-    padding-inline: 1rem;
-  }
-
-  .section {
-    margin-bottom: 1.6rem;
+  .hero {
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -381,18 +362,8 @@ footer {
   html {
     font-size: 15px;
   }
-
-  .hero {
-    padding: 1.5rem 1.25rem;
-  }
-
   .card,
   .info-block {
-    padding: 0.9rem 0.95rem;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 1rem;
   }
 }
