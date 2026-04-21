@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Roulotte Solidaire Toulouse – Site officiel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="La Roulotte Solidaire Toulouse : maraudes, collectes et actions solidaires pour les personnes à la rue." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>La Roulotte Solidaire</span>
+        <span>Toulouse</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="actions.html">Nos actions</a></li>
+        <li><a href="aider.html">Nous aider</a></li>
+        <li><a href="infos.html">Infos pratiques</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1>La Roulotte Solidaire Toulouse</h1>
+      <p class="lead">
+        Aller à la rencontre des personnes à la rue, avec bienveillance, écoute
+        et soutien concret, au cœur de Toulouse.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge">Maraudes solidaires</span>
+        <span class="badge">Collectes de dons</span>
+        <span class="badge">Événements de quartier</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="aider.html" class="btn btn-primary">Voir comment aider</a>
+        <a href="actions.html" class="btn btn-outline">Découvrir nos actions</a>
+      </div>
+    </div>
+
+    <aside class="hero-side">
+      <h2>Prochain rendez-vous</h2>
+      <p><strong>Vide-grenier solidaire</strong><br />
+        Cours Dillon, Toulouse<br />
+        <strong>10 mai 2026</strong>
+      </p>
+      <p>
+        Venez nous rencontrer, déposer des dons, chiner ou simplement échanger
+        autour d’un café.
+      </p>
+      <ul>
+        <li>Dépôt de dons matériels sur place</li>
+        <li>Informations sur les maraudes</li>
+        <li>Rencontre avec les bénévoles</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="section">
+    <h2>Notre mission</h2>
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Maraudes</span>
+        <h3>Aller vers les personnes à la rue</h3>
+        <p>
+          Nous organisons des maraudes pour distribuer boissons, nourriture,
+          vêtements, produits d’hygiène et surtout du temps d’écoute.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Collectes</span>
+        <h3>Récolter des dons utiles</h3>
+        <p>
+          Nous collectons des vêtements, chaussures, produits d’hygiène,
+          couvertures et croquettes pour chiens, selon les besoins de la saison.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Lien social</span>
+        <h3>Créer des rencontres</h3>
+        <p>
+          Au-delà du matériel, nous cherchons à recréer du lien, de la
+          considération et des moments de partage avec les personnes en grande
+          précarité.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Comment vous pouvez agir dès maintenant</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Faire un don matériel</h3>
+        <p>
+          Consultez la liste des besoins prioritaires et déposez vos dons lors
+          de nos événements ou sur rendez-vous.
+        </p>
+        <a href="aider.html">Voir les besoins actuels</a>
+      </article>
+
+      <article class="card">
+        <h3>Devenir bénévole</h3>
+        <p>
+          Rejoignez l’équipe pour les maraudes, la logistique, la communication
+          ou l’organisation d’événements.
+        </p>
+        <a href="aider.html#benevolat">En savoir plus sur le bénévolat</a>
+      </article>
+
+      <article class="card">
+        <h3>Relayer l’information</h3>
+        <p>
+          Parlez de La Roulotte Solidaire autour de vous et partagez nos
+          publications sur les réseaux sociaux.
+        </p>
+        <a href="infos.html#reseaux">Voir nos réseaux sociaux</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> La Roulotte Solidaire Toulouse – Association
+      solidaire.
+    </div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="infos.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
