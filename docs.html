@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Documentation – SiteWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Accédez à la documentation interne du projet SiteWeb." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>SiteWeb</span>
+        <span>Projet</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="docs.html" class="active">Documentation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Documentation</h1>
+    <p class="lead">Accédez aux documents internes du projet.</p>
+
+    <ul class="cards">
+      <li class="card">
+        <h3>Architecture</h3>
+        <p>Description de l’architecture globale du projet.</p>
+        <a href="docs/architecture.md">Voir le document</a>
+      </li>
+
+      <li class="card">
+        <h3>Workflow</h3>
+        <p>Conventions de travail, branches, commits, releases.</p>
+        <a href="docs/workflow.md">Voir le document</a>
+      </li>
+
+      <li class="card">
+        <h3>Structure</h3>
+        <p>Arborescence des fichiers et dossiers.</p>
+        <a href="docs/structure.md">Voir le document</a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> SiteWeb – Projet v1.1</div>
+    <div class="footer-links">
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
