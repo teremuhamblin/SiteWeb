@@ -25,21 +25,13 @@ Objectif :
 ---
 
 2. Arborescence
-
-`
-/
-├── .github/          → configuration GitHub
-├── css/              → styles globaux
-│   └── styles.css
+```text
 ├── index.html        → accueil
 ├── actions.html      → nos actions
 ├── aider.html        → dons & bénévolat
 ├── infos.html        → infos pratiques
 ├── mention-legale.html
-├── LICENSE-Code
-├── LICENSE-Contenu
-└── README.md
-`
+```
 
 ---
 
