@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services – SiteWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Découvrez les services proposés dans le cadre du SiteWeb." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>SiteWeb</span>
+        <span>Projet</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="docs.html">Documentation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Nos services</h1>
+    <p class="lead">
+      Les services proposés dans le cadre du SiteWeb.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Service 1</h3>
+        <p>Description du service 1.</p>
+      </article>
+
+      <article class="card">
+        <h3>Service 2</h3>
+        <p>Description du service 2.</p>
+      </article>
+
+      <article class="card">
+        <h3>Service 3</h3>
+        <p>Description du service 3.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> SiteWeb – Projet v1.1</div>
+    <div class="footer-links">
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
