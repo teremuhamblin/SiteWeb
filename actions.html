@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nos actions – La Roulotte Solidaire Toulouse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Découvrez les maraudes, collectes et actions solidaires menées par La Roulotte Solidaire Toulouse." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>La Roulotte Solidaire</span>
+        <span>Toulouse</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actions.html" class="active">Nos actions</a></li>
+        <li><a href="aider.html">Nous aider</a></li>
+        <li><a href="infos.html">Infos pratiques</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Nos actions solidaires</h1>
+    <p class="lead">
+      Chaque semaine, nous menons des actions concrètes pour soutenir les personnes à la rue :
+      maraudes, collectes, événements de quartier et accompagnement humain.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Maraudes</span>
+        <h3>Maraudes de rue</h3>
+        <p>
+          Distribution de boissons chaudes, nourriture, vêtements, produits d’hygiène
+          et surtout du temps d’écoute et de discussion.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Collectes</span>
+        <h3>Collectes de dons</h3>
+        <p>
+          Organisation de collectes saisonnières pour répondre aux besoins urgents :
+          chaussures, tongs, vêtements d’été, couvertures, croquettes, etc.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Événements</span>
+        <h3>Événements solidaires</h3>
+        <p>
+          Vide-greniers, rencontres de quartier, ateliers, moments conviviaux pour créer du lien
+          et sensibiliser à la solidarité locale.
+        </p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> La Roulotte Solidaire Toulouse – Association solidaire.
+    </div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="infos.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
