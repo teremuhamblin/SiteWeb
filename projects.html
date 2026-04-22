@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projets – SiteWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Découvrez les projets réalisés dans le cadre du SiteWeb." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>SiteWeb</span>
+        <span>Projet</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="docs.html">Documentation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Nos projets</h1>
+    <p class="lead">
+      Une sélection de projets représentatifs réalisés dans le cadre du SiteWeb.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Projet 1</h3>
+        <p>Présentation d’un premier projet avec description courte.</p>
+      </article>
+
+      <article class="card">
+        <h3>Projet 2</h3>
+        <p>Présentation d’un second projet avec description courte.</p>
+      </article>
+
+      <article class="card">
+        <h3>Projet 3</h3>
+        <p>Présentation d’un troisième projet avec description courte.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> SiteWeb – Projet v1.1</div>
+    <div class="footer-links">
+      <a href="docs.html">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
