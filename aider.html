@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nous aider – La Roulotte Solidaire Toulouse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Découvrez comment aider La Roulotte Solidaire Toulouse : dons matériels, bénévolat, soutien logistique." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>La Roulotte Solidaire</span>
+        <span>Toulouse</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actions.html">Nos actions</a></li>
+        <li><a href="aider.html" class="active">Nous aider</a></li>
+        <li><a href="infos.html">Infos pratiques</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Comment nous aider</h1>
+    <p class="lead">
+      Votre soutien est essentiel : dons matériels, bénévolat, relais d’information,
+      tout compte pour aider les personnes à la rue.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Dons matériels</h3>
+        <p>
+          Nous recherchons régulièrement des vêtements hommes, chaussures été,
+          produits d’hygiène, croquettes pour chiens, bouteilles 50cl, etc.
+        </p>
+        <a href="#besoins">Voir les besoins actuels</a>
+      </article>
+
+      <article class="card" id="benevolat">
+        <h3>Devenir bénévole</h3>
+        <p>
+          Rejoignez l’équipe pour les maraudes, la logistique, la communication
+          ou l’organisation d’événements solidaires.
+        </p>
+        <a href="infos.html#contact">Nous contacter</a>
+      </article>
+
+      <article class="card">
+        <h3>Relayer l’information</h3>
+        <p>
+          Parlez de l’association autour de vous et partagez nos publications
+          pour nous aider à toucher plus de personnes.
+        </p>
+        <a href="infos.html#reseaux">Voir nos réseaux sociaux</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="besoins">
+    <h2>Besoins prioritaires</h2>
+    <ul>
+      <li>Chaussures été hommes + tongs</li>
+      <li>Vêtements été hommes (tee-shirts, shorts, pantalons légers)</li>
+      <li>Sous-vêtements hommes + chaussettes</li>
+      <li>Produits d’hygiène</li>
+      <li>Croquettes pour chiens</li>
+      <li>Bouteilles plastique 50cl</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> La Roulotte Solidaire Toulouse – Association solidaire.
+    </div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="infos.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
