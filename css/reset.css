@@ -1,0 +1,93 @@
+/* ==========================================================
+   RESET.CSS — VERSION OPTIMISÉE POUR LA ROULOTTE
+   Cohérente avec normalize.css + styles.css v1.1
+   ========================================================== */
+
+/* ------------------------------
+   RESET GLOBAL
+------------------------------ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   HTML & BODY
+------------------------------ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+/* ------------------------------
+   MEDIA ELEMENTS
+------------------------------ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------------------
+   FORM ELEMENTS
+------------------------------ */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ------------------------------
+   LINKS
+------------------------------ */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------------------
+   LISTS
+------------------------------ */
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* ------------------------------
+   TABLES
+------------------------------ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
