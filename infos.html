@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Infos pratiques – La Roulotte Solidaire Toulouse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Adresse, contact, horaires, réseaux sociaux et informations pratiques de La Roulotte Solidaire Toulouse." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">R</div>
+      <div class="brand-text">
+        <span>La Roulotte Solidaire</span>
+        <span>Toulouse</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actions.html">Nos actions</a></li>
+        <li><a href="aider.html">Nous aider</a></li>
+        <li><a href="infos.html" class="active">Infos pratiques</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h1>Infos pratiques</h1>
+    <p class="lead">
+      Retrouvez ici toutes les informations utiles pour nous contacter,
+      nous rencontrer ou participer à nos actions.
+    </p>
+
+    <div class="cards">
+      <article class="card" id="contact">
+        <h3>Contact</h3>
+        <p><strong>Email :</strong> laroulottesolidaire@gmail.com</p>
+        <p><strong>Téléphone :</strong> 07 51 58 26 60</p>
+      </article>
+
+      <article class="card">
+        <h3>Adresse</h3>
+        <p>
+          11 Rue Charles Laganne<br />
+          31300 Toulouse<br />
+          Arrêt Fer à Cheval (Bus 14 / 1 – Tram)
+        </p>
+      </article>
+
+      <article class="card" id="reseaux">
+        <h3>Réseaux sociaux</h3>
+        <p>
+          Retrouvez nos actualités, appels à dons et événements :
+        </p>
+        <ul>
+          <li><a href="https://www.facebook.com/laroulottesolidaire" target="_blank">Facebook</a></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> La Roulotte Solidaire Toulouse – Association solidaire.
+    </div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="infos.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
