@@ -1,4 +1,6 @@
-# 📜 CHANGELOG — SiteWeb La Roulotte Solidaire Toulouse
+###### CHANGELOG.md - markdown 
+# 📜 SiteWeb 
+>La Roulotte Solidaire Toulouse
 
 Toutes les modifications majeures depuis la création du projet.
 
@@ -59,3 +61,23 @@ Toutes les modifications majeures depuis la création du projet.
 
 ## 🟩 Statut
 🎉 **Version 1.0 finalisée et déployée**
+
+---
+---
+
+## 🟦 v1.1 — Release Stable
+📅 Date : 22 avril 2026  
+🎯 Mise à jour de la version stable du site
+
+### Added
+- Ajout de la page `projects.html` listant les projets.
+- Ajout de la page `services.html` présentant les services.
+- Ajout de la page `contact.html` avec formulaire statique.
+- Ajout de la page `docs.html` donnant accès à la documentation interne.
+
+### Changed
+- Harmonisation du header et du footer sur toutes les pages.
+- Amélioration de la navigation globale du site.
+
+### Fixed
+- Correction de liens internes entre les différentes pages.
