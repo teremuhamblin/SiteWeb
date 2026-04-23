@@ -1,6 +1,5 @@
 # assets/
-
-Ce dossier contient toutes les ressources statiques du projet.
+>Ce dossier contient toutes les ressources statiques du projet.
 
 ## Contenu
 - Images (PNG, JPG, SVG)
